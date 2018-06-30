@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+#%x('source ../secrets.sh')
+
+$:.unshift(File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib')))
+
+require 'rdiscogs'
+
+DiscogsApp.new(ARGV.first).run
